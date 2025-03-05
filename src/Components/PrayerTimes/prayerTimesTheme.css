@@ -1,0 +1,135 @@
+/* Base text styling */
+.prayer-text {
+  font-family: 'Roboto', 'Noto Sans', sans-serif;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  transition: color 0.4s ease, opacity 0.3s ease;
+}
+
+/* Gradient backgrounds with subtle animations */
+[class^="bg-"] {
+  background-size: 200% 200%;
+  transition: background-position 1.2s ease;
+}
+
+[class^="bg-"]:hover {
+  background-position: 100% 100%;
+}
+
+/* Time-appropriate color schemes */
+.bg-fajr {
+  background: linear-gradient(135deg, #e6eaff 0%, #d1d6ff 100%);
+}
+
+.bg-fajr .prayer-text {
+  color: #4a5568;
+}
+
+.bg-sunrise {
+  background: linear-gradient(135deg, #fff3e6 0%, #ffe8cc 100%);
+}
+
+.bg-sunrise .prayer-text {
+  color: #6b4d32;
+}
+
+.bg-dhuhr {
+  background: linear-gradient(135deg, #f0f9eb 0%, #e3f3d9 100%);
+}
+
+.bg-dhuhr .prayer-text {
+  color: #4a6b3f;
+}
+
+.bg-asr {
+  background: linear-gradient(135deg, #e8f4fd 0%, #d6e9fa 100%);
+}
+
+.bg-asr .prayer-text {
+  color: #3a536b;
+}
+
+.bg-maghrib {
+  background: linear-gradient(135deg, #f9f2e8 0%, #f5e6d3 100%);
+}
+
+.bg-maghrib .prayer-text {
+  color: #6b524a;
+}
+
+.bg-isha {
+  background: linear-gradient(135deg, #e8eaf6 0%, #d5d8e6 100%);
+}
+
+.bg-isha .prayer-text {
+  color: #4a4e6b;
+}
+
+.bg-midnight {
+  background: linear-gradient(135deg, #eaeef6 0%, #d8dce4 100%);
+}
+
+.bg-midnight .prayer-text {
+  color: #4a4a4a;
+}
+
+.bg-firstthird {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+}
+
+.bg-firstthird .prayer-text {
+  color: #4a5568;
+}
+
+.bg-lastthird {
+  background: linear-gradient(135deg, #f8f9fb 0%, #e9ecef 100%);
+}
+
+.bg-lastthird .prayer-text {
+  color: #4a5568;
+}
+
+.bg-imsak {
+  background: linear-gradient(135deg, #f0fafa 0%, #e0f5f5 100%);
+}
+
+.bg-imsak .prayer-text {
+  color: #4a6b6b;
+}
+
+.bg-default {
+  background: linear-gradient(135deg, #f9fafb 0%, #f1f3f5 100%);
+}
+
+.bg-default .prayer-text {
+  color: #4a5568;
+}
+
+/* Subtle interactive effects */
+.current-prayer {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.current-prayer:hover {
+  transform: translateX(5px);
+  opacity: 0.9;
+}
+
+/* Loading state animation */
+@keyframes soft-pulse {
+  0% {
+    opacity: 0.95
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0.95
+  }
+}
+
+.loading-skeleton {
+  animation: soft-pulse 2s infinite;
+}
